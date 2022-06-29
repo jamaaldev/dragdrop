@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+
+    /* gap: 15px; */
+height: 100vh;
+overflow: hidden;
+    background-color: blueviolet;
+   
+}
+
+.dropzone{
+    position: relative;
+       background-color: rgb(58, 61, 61);
+       width: 200px;
+       height: 200px; 
+       margin: 7px;
+       pointer-events:painted;
+}
+.fill{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: cadetblue;
+   pointer-events: visible;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    cursor: grab;
+
+}
+#one{
+ 
+    background-color: rgb(146, 160, 95);
+}
+/* box-sizing: border-box; it makes inside border with out it outside */
+.hoverdropzone{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    box-sizing:border-box;
+    
+
+    
+    background-color: rgb(223, 219, 219);
+    border: dotted 4px blueviolet;
+    cursor:grabbing;
+}
+.hoverdropzone::before{
+    
+        content: "Drop Here";
+        position: absolute;
+     
+        font-size: 24px;
+        padding: 5px 20px;
+       
+        text-align: center;
+        margin: 10px;
+        object-fit: fill;
+        background-color: rgb(223, 219, 219);
+        border: dotted 5px blueviolet;
+        color: blueviolet;
+ 
+  
+}
+.invisible{
+    display: none;
+}
